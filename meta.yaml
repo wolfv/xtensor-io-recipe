@@ -1,0 +1,49 @@
+{% set name = "xtensor-io" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "843ca01de71de63391b2b0c52f87ddab84082688f1ae49e1da76c43a68b8eb24" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xtensor-io/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    # - {{ compiler('cxx') }}
+    - toolchain
+    - gcc-6
+    - cmake
+    - openimageio
+    - zlib
+    - xtensor
+    - libsndfile
+    - boost # need to add boost here to grab the latest version necessary for openimageio
+  run:
+    - zlib
+    - xtensor
+    - openimageio
+    - boost
+    - libsndfile
+
+about:
+  home: http://quantstack.net/xtensor
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Image/NPZ input/output for xtensor, the C++ tensor algebra library
+  description: This library enables loading of many image formats into xtensor/xarrays and NPZ.
+  doc_url: http://xtensor-io.readthedocs.io
+  dev_url: https://github.com/QuantStack/xtensor-io
+
+extra:
+  recipe-maintainers:
+    - wolfv
+    - SylvainCorlay
+    - JohanMabille
