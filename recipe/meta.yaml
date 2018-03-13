@@ -18,7 +18,7 @@ requirements:
   build:
     # - {{ compiler('cxx') }}
     - toolchain
-    - gcc-6
+    - gcc-7  # [linux]
     - cmake
     - openimageio
     - zlib
