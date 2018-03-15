@@ -23,14 +23,14 @@ requirements:
     - openimageio
     - zlib
     - xtensor
-    - libsndfile
-    - boost # need to add boost here to grab the latest version necessary for openimageio
+    - libsndfile  # [not win]
+    - boost  # need to add boost here to grab the latest version necessary for openimageio
   run:
     - zlib
     - xtensor
     - openimageio
     - boost
-    - libsndfile
+    - libsndfile  # [not win]
 
 about:
   home: http://quantstack.net/xtensor
