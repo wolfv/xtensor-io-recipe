@@ -1,6 +1,6 @@
 {% set name = "xtensor-io" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "5cb67d532e865eb8c5551bdb6509861513417a4dacf92efe2e2c541f842ded0d" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "6dbd8ab214def6222ace451800417b2f9a38b3931c41119403eeeb33e43a8350" %}
 
 package:
   name: {{ name|lower }}
@@ -22,6 +22,7 @@ requirements:
     - cmake
     - openimageio
     - zlib
+    - HighFive
     - xtensor >=0.18.0,<0.19
     - libsndfile  # [not win]
     - boost  # need to add boost here to grab the latest version necessary for openimageio
@@ -30,6 +31,7 @@ requirements:
     - xtensor >=0.18.0,<0.19
     - openimageio
     - boost
+    - HighFive
     - libsndfile  # [not win]
 
 about:
