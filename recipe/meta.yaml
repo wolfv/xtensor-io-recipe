@@ -22,16 +22,16 @@ requirements:
     - cmake
     - openimageio
     - zlib
-    - HighFive
-    - xtensor >=0.18.0,<0.19
+    - highfive  # [not win]
+    - xtensor >=0.19.0,<0.20
     - libsndfile  # [not win]
     - boost  # need to add boost here to grab the latest version necessary for openimageio
   run:
     - zlib
-    - xtensor >=0.18.0,<0.19
+    - xtensor >=0.19.0,<0.20
     - openimageio
     - boost
-    - HighFive
+    - highfive  # [not win]
     - libsndfile  # [not win]
 
 about:
